@@ -9,6 +9,9 @@ Secure document sharing web application.
 - **Auth:** Local authentication with Argon2 password hashing and JWT
 - **Security:** Helmet, rate limiting, backend access control
 
+
+The project is limited to a MVP because of the short project period. The MVP focuses on local authentication, password hashing, JWT based login and access control for documents.
+
 ## Setup
 
 ### 1. Clone the repo
