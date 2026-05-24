@@ -36,11 +36,7 @@ npm run dev
 ```
 
 ### 4. Environment Variables
-Copy `backend/.env.example` to `backend/.env` and fill in:
-- `PEPPER` - a long random secret string
-- `GOOGLE_CLIENT_ID` - from Google Cloud Console
-- `GOOGLE_CLIENT_SECRET` - from Google Cloud Console
-- JWT keys (generated via the key generation script)
+The backend uses a `.env` file for secrets such as `PEPPER` and `JWT_SECRET`.  
 
 ## Project Structure
 ```
