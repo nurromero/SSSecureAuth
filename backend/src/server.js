@@ -4,6 +4,7 @@ import helmet from 'helmet';
 import cors from 'cors';
 import cookieParser from 'cookie-parser';
 import { rateLimit } from 'express-rate-limit';
+import authRoutes from './routes/authRoutes.js'
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -14,6 +15,7 @@ app.use(cors({ origin: 'http://localhost:5173', credentials: true }));
 app.use(express.json());
 app.use(cookieParser());
 
+
 // Rate limiting - protects against brute force
 const limiter = rateLimit({
   windowMs: 15 * 60 * 1000,        // 15 minutes
@@ -22,9 +24,9 @@ const limiter = rateLimit({
 });
 app.use(limiter);
 
-// --- Routes (to be implemented) ---
-// app.use('/auth', authRoutes);
-// app.use('/documents', documentRoutes);
+// --- Routes ---
+app.use('/auth', authRoutes);
+
 
 app.get('/', (req, res) => {
   res.json({ message: 'SSSecureAuth API is running' });
