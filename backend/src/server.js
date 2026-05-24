@@ -5,6 +5,7 @@ import cors from 'cors';
 import cookieParser from 'cookie-parser';
 import { rateLimit } from 'express-rate-limit';
 import authRoutes from './routes/authRoutes.js'
+import documentRoutes from './routes/documentRoutes.js'
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -26,7 +27,7 @@ app.use(limiter);
 
 // --- Routes ---
 app.use('/auth', authRoutes);
-
+app.use('/documents', documentRoutes);
 
 app.get('/', (req, res) => {
   res.json({ message: 'SSSecureAuth API is running' });
