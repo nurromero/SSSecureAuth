@@ -3,6 +3,7 @@ import jwt from 'jsonwebtoken'
 const JWT_SECRET = process.env.JWT_SECRET || 'dev-secret'
 
 export function requireAuth(req, res, next) {
+  // Reads the Authorization header from the request
   const authHeader = req.headers.authorization
 
   if (!authHeader || !authHeader.startsWith('Bearer ')) {

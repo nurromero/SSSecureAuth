@@ -10,7 +10,7 @@
         <button class="logout" @click="logout">Log out</button>
       </div>
 
-      <h2>Shared documents</h2>
+      <h2>Documents you have access to</h2>
 
       <p v-if="message" class="message">{{ message }}</p>
 
