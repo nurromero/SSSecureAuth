@@ -10,7 +10,8 @@ Secure document sharing web application.
 - **Security:** Helmet, rate limiting, backend access control
 
 
-The project is limited to a MVP because of the short project period. The MVP focuses on local authentication, password hashing, JWT based login and access control for documents.
+Projektet demonstrerer lokal authentication, password hashing med Argon2, JWT-baseret login og backend access control til delte dokumenter.
+
 
 ## Setup
 
@@ -50,7 +51,7 @@ SSSecureAuth/
 │   └── .env.example
 └── frontend/
     ├── src/
-    │   ├── views/        ← Pages (Login, Register, Dashboard)
+    │   ├── views/        ← Pages (Login,  Dashboard)
     │   ├── components/   ← Reusable UI components
     │   └── router/       ← Page routing
     └── vite.config.js
