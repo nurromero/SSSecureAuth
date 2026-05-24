@@ -5,8 +5,12 @@ Secure document sharing web application.
 ## Tech Stack
 - **Frontend:** Vue 3 + Vite
 - **Backend:** Node.js + Express
-- **Database:** SQLite
-- **Auth:** Google OAuth 2.0 + OpenID Connect
+- **Database:** SQLite using sql.js
+- **Auth:** Local authentication with Argon2 password hashing and JWT
+- **Security:** Helmet, rate limiting, backend access control
+
+
+The project is limited to a MVP because of the short project period. The MVP focuses on local authentication, password hashing, JWT based login and access control for documents.
 
 ## Setup
 
@@ -32,11 +36,7 @@ npm run dev
 ```
 
 ### 4. Environment Variables
-Copy `backend/.env.example` to `backend/.env` and fill in:
-- `PEPPER` - a long random secret string
-- `GOOGLE_CLIENT_ID` - from Google Cloud Console
-- `GOOGLE_CLIENT_SECRET` - from Google Cloud Console
-- JWT keys (generated via the key generation script)
+The backend uses a `.env` file for secrets such as `PEPPER` and `JWT_SECRET`.  
 
 ## Project Structure
 ```
