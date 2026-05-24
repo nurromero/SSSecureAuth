@@ -16,3 +16,6 @@ Thumbs.db
 
 # VS Code
 .vscode/
+
+sssecureauth.db.json
+*.db.json
