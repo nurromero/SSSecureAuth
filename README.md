@@ -5,8 +5,9 @@ Secure document sharing web application.
 ## Tech Stack
 - **Frontend:** Vue 3 + Vite
 - **Backend:** Node.js + Express
-- **Database:** SQLite
-- **Auth:** Google OAuth 2.0 + OpenID Connect
+- **Database:** SQLite using sql.js
+- **Auth:** Local authentication with Argon2 password hashing and JWT
+- **Security:** Helmet, rate limiting, backend access control
 
 ## Setup
 
