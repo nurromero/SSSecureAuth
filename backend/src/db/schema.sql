@@ -3,8 +3,7 @@
 CREATE TABLE IF NOT EXISTS users (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   email TEXT UNIQUE NOT NULL,
-  password_hash TEXT,              -- NULL if user logs in via Google SSO only
-  google_id TEXT UNIQUE,           -- NULL if user logs in with password only
+  password_hash TEXT NOT NULL,
   created_at DATETIME DEFAULT CURRENT_TIMESTAMP
 );
 
